@@ -1,9 +1,14 @@
-# Model Context Protocol
+# [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
 > MCP is a standardized protocol that gives AI applications a consistent way to discover and use external tools, resources, and prompts, instead of requiring every AI application to build a separate custom integration for every system
 
-[Notes](https://ai-automation-with-mayank.netlify.app/#mcp)
+**Non-Techincal Explaination**
+
+>MCP is just a shared toolbox a standard collection of tools and APIs that any AI model can reach into, instead of every developer building their own private toolbox from scratch.
+
+---
 
 ## Before vs. After MCP
+<img src="./assets/02_mcp_before_after.png" width="1200" height="500">
 
 | | Before MCP | After MCP |
 |---|---|---|
@@ -12,7 +17,17 @@
 | Change management | Provider changes their API → every integrator updates their own code | Server absorbs the change; clients untouched |
 | Security | Every tool needs its own auth, owned by you | Still needs auth, but centralized at the server |
 
-<img src="./assets/02_mcp_before_after.png" width="1200" height="500">
+<details>
+  <summary><b>Before MCP</b></summary>
+    <img src="./assets/10_before_mcp.png" width="800" height="300">
+</details>
+
+<details>
+  <summary><b>After MCP</b></summary>
+    <img src="./assets/11_after_mcp.png" width="800" height="300">
+</details>
+
+--- 
 
 ## The problem without MCP
 * Imagine you have an AI assistant that needs to work with:
@@ -128,5 +143,9 @@ A -->|MCP| B
 B -->|API / SDK / DB driver| C
 ```
 
-https://mcp-lifecycle.netlify.app/
-https://mcp-lifecycle-simulator.netlify.app/
+---
+
+## Useful Resources for Learning MCP
+* [**MCP Lifecycle**](https://mcp-lifecycle.netlify.app/)
+* [**MCP Lifecycle — Conversation Simulator**](https://mcp-lifecycle-simulator.netlify.app/)
+* [**MCP Explained**](https://ai-automation-with-mayank.netlify.app/#mcp)
