@@ -10,12 +10,13 @@
 ## Before vs. After MCP
 <img src="./assets/02_mcp_before_after.png" width="1200" height="500">
 
-| | Before MCP | After MCP |
+| Aspect | Traditional Integration | MCP-Based Integration |
 |---|---|---|
-| Defining an integration | Easy for a single API — any LLM can wrap one quickly | Easy to *connect* — point your host at the server |
-| Maintenance | Every team writes and maintains its own wrapper — violates DRY at scale | Sits with whoever runs the server (usually the provider) |
-| Change management | Provider changes their API → every integrator updates their own code | Server absorbs the change; clients untouched |
-| Security | Every tool needs its own auth, owned by you | Still needs auth, but centralized at the server |
+| **Integration setup** | Straightforward for individual APIs, with each LLM integrating directly through its own wrapper | Simplifies connectivity by allowing the host to connect directly to an MCP server |
+| **Ownership & maintenance** | Each engineering team builds, manages, and updates its own integration, leading to duplicated effort at scale | Integration logic is maintained by the server owner, typically the API or service provider |
+| **Handling API changes** | Any change to the underlying provider API requires each individual integration to be modified | The MCP server handles provider-side changes, allowing connected clients to remain unchanged |
+| **Authentication & security** | Authentication is implemented and managed separately for each tool or integration | Authentication is still required, but responsibilities can be consolidated and managed centrally at the server layer |
+
 
 <details>
   <summary><b>Before MCP</b></summary>
