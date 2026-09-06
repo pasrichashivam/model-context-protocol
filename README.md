@@ -51,17 +51,6 @@
     * How do I authenticate with Slack?
     * How do I retrieve data from this database?
 
-**Analogy**
-* Imagine every electronic device had its own completely different charger
-* You need to build/buy a different connection for everything
-    ```text
-        Phone       → Charger A
-        Laptop      → Charger B
-        Camera      → Charger C
-        Headphones  → Charger D
-        Tablet      → Charger E
-    ```
-
 ## What MCP does
 **MCP introduces a common protocol for AI applications to communicate with tools and data.**
 
@@ -144,6 +133,8 @@ B -->|API / SDK / DB driver| C
 ```
 
 ---
+
+## [MCP Architecture & LifeCycle](./notes/01_mcp_architecture.md)
 
 ## Useful Resources for Learning MCP
 * [**MCP Lifecycle**](https://mcp-lifecycle.netlify.app/)
