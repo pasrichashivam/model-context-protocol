@@ -3,6 +3,17 @@
 
 [Notes](https://ai-automation-with-mayank.netlify.app/#mcp)
 
+## Before vs. After MCP
+
+| | Before MCP | After MCP |
+|---|---|---|
+| Defining an integration | Easy for a single API — any LLM can wrap one quickly | Easy to *connect* — point your host at the server |
+| Maintenance | Every team writes and maintains its own wrapper — violates DRY at scale | Sits with whoever runs the server (usually the provider) |
+| Change management | Provider changes their API → every integrator updates their own code | Server absorbs the change; clients untouched |
+| Security | Every tool needs its own auth, owned by you | Still needs auth, but centralized at the server |
+
+<img src="./assets/02_mcp_before_after.png" width="1200" height="500">
+
 ## The problem without MCP
 * Imagine you have an AI assistant that needs to work with:
     * GitHub
@@ -104,8 +115,6 @@ flowchart LR
           GitHub        Jira         Slack
 
 ```
-
-<img src="./assets/02_mcp_before_after.png" width="500" height="400">
 
 ## Takeaway 
 **MCP is a standard protocol for exposing tools, resources, and prompts to AI applications**
