@@ -118,3 +118,6 @@ flowchart LR
 A -->|MCP| B
 B -->|API / SDK / DB driver| C
 ```
+
+https://mcp-lifecycle.netlify.app/
+https://mcp-lifecycle-simulator.netlify.app/
