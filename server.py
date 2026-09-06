@@ -15,4 +15,4 @@ def add(a: int, b: int) -> int:
 if __name__ == "__main__":
     mcp.run()
 
-# uv run python server.py
+# npx -y @modelcontextprotocol/inspector uv run python server

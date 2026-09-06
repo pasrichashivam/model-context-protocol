@@ -105,6 +105,8 @@ flowchart LR
 
 ```
 
+<img src="./assets/02_mcp_before_after.png" width="500" height="400">
+
 ## Takeaway 
 **MCP is a standard protocol for exposing tools, resources, and prompts to AI applications**
 ```mermaid
