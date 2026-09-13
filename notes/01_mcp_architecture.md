@@ -41,6 +41,10 @@ The transport layer manages communication channels and authentication between cl
     * Messages are delimited by newlines, and MUST NOT contain embedded newlines.
     * The server MUST NOT write anything to its stdout that is not a valid MCP message.
     * The client MUST NOT write anything to the server’s stdin that is not a valid MCP message.
+    * Advantages:
+        * Simple — no server address, no network setup
+        * Private by construction — nothing is exposed to anything outside the room, so there's no network attack surface to defend
+        * Fast — no network round-trip at all, direct communication between two programs on the same machine
 2. **Streamable HTTP transport**: 
     * Uses **HTTP POST** for client-to-server messages with optional **Server-Sent Events** for streaming capabilities. 
     * This transport supports HTTP authentication methods including bearer tokens, API keys, and custom headers. 
@@ -222,10 +226,16 @@ MCP begins with capability negotiation handshake. Three steps every time
 * The one phase with no message format of its own.
 * No JSON-RPC message is exchanged during shutdown at all. The entire responsibility shifts to the transport layer.
 
+<img src="../assets/16_shutdown.png" width="400" height="200">
+
 | Transport | Client-initiated (common) | Server-initiated (rare) |
 |---|---|---|
 | **stdio** | Close stdin, wait; `SIGTERM` if it doesn't; `SIGKILL` as a last resort | Server closes its output stream and exits |
 | **Streamable HTTP** | Close the HTTP connection | Server closes unexpectedly — client should reconnect gracefully |
+
+
+
+
 
 ## Error Handling
 ***6 Scenarios***
