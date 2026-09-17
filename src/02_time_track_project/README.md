@@ -1,4 +1,7 @@
 # Time Track Application
+* TimeTrack is a full-stack time-tracking application that lets users log and review project hours through a FastAPI web interface. 
+* It also exposes the same SQLite-backed data and operations through a FastMCP server, allowing AI assistants to create entries, retrieve timesheets, and generate project summaries.
+
 ### Project Summary with SQL `GROUP BY`
 <img src="../../assets/19_project_02.png" width="900" height="400">
 
