@@ -34,7 +34,9 @@
 - The deployment provides a public MCP URL, such as `https://your-project.fastmcp.app/mcp`.
 - Confirm whether the deployment also serves the FastAPI website; use a general application host such as Railway when both the website and MCP server must be public.
 
+---
 
+### main.py
 
 `main.py` starts a single web application that exposes two interfaces backed by the same SQLite database:
 
